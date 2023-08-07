@@ -3,7 +3,7 @@ function isJavaScript(file){
         return 'please provide me a string value'
     }
     else{
-        if(file.endsWith(".js")){
+        if(file.toLowerCase().endsWith(".js")){
             return true
         }else{
             return false
@@ -12,5 +12,5 @@ function isJavaScript(file){
     
 }
 
-const fileName = isJavaScript('hello.html.js.css.gs.js');
+const fileName = isJavaScript('hello.html.js.css.gs.js.JS');
 console.log(fileName);
