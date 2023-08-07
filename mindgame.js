@@ -1,5 +1,5 @@
 function mindGame(number){
-    if(typeof number !== 'number'){
+    if(typeof number !== 'number' || number <= 0){
         return 'please provide me a valid number';
     }
     else{
@@ -8,5 +8,5 @@ function mindGame(number){
     }
 }
 
-const positiveNumber = mindGame(5)
+const positiveNumber = mindGame(5);
 console.log(positiveNumber);
