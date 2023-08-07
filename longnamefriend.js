@@ -1,5 +1,5 @@
 function bestFriend(largestName) {
-  if (!Array.isArray(largestName)) {
+  if (!Array.isArray(largestName.length)) {
     return "please provide me of an array";
   } else {
     let largestFriend = [0];
