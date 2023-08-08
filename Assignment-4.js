@@ -1,4 +1,5 @@
-/*function cubeNumber(number) {
+/* 1.Problem
+function cubeNumber(number) {
     if(typeof number !== 'number'){
         return 'Please Provide Me With A Valid Number!!!';
     }
@@ -8,6 +9,8 @@
 }
 console.log(cubeNumber(3));
 console.log(cubeNumber(4));
+
+2.Problem
 
 // function matchFinder(string1, string2) {
 
@@ -30,7 +33,7 @@ console.log(cubeNumber(4));
 // console.log(myString);
 
 
-
+3.Problem
 
 function findAddress(obj) {
     if(typeof obj !== 'object'){
@@ -54,9 +57,33 @@ const myAddress = {
     society: "Earth Perfect"
 };
 const find = findAddress(myAddress);
-console.log(find);*/
+console.log(find); */
 
+// 4.Problem
 
+function canPay(changeArray, totalDue) {
+
+    if(!Array.isArray(changeArray) || typeof totalDue !== 'number'){
+        return 'Please Provide Me With A Valid Array & Number!!!'
+    }
+    else{
+        let arrayTotal = 0;
+        for(let item of changeArray){
+            if(typeof item !== 'number'){
+                return 'Please Provide Me With A Valid Array Number!!!'
+            }
+            arrayTotal = item + arrayTotal;
+        }
+
+        if(arrayTotal > totalDue){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+}
+console.log(canPay([1,5,5],10));
 
 
 
