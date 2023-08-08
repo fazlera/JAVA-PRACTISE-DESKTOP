@@ -16,5 +16,5 @@ const arrayNumber = [2,15,6,9,7,5,12,21,65,69];
 
 console.log(findLargest(arrayNumber));
 
-let x =12; 
-console.log(x);
+// let x =12; 
+// console.log(x);
