@@ -12,28 +12,26 @@ console.log(cubeNumber(4)); */
 
 
 
-function matchFinder(string1, string2) {
+// function matchFinder(string1, string2) {
 
-    if(typeof string1 !== 'string' || typeof string2 !== 'string'){
-        return 'Please Provide Me With A Valid String!!!'
-    }
+//     if(typeof string1 !== 'string' || typeof string2 !== 'string'){
+//         return 'Please Provide Me With A Valid String!!!'
+//     }
     
-        if(string1.includes("ohn") === string2.includes("ohn")){
-            return true;
-        }
-        else{
-            return false;
-        }
-        
-    
+//         if(string1.includes("ohn") === string2.includes("ohn")){
+//             return true;
+//         }
+//         else{
+//             return false;
+//         }    
 
-}
+// }
 
 
-console.log(matchFinder("John","ohn"));
-console.log(matchFinder("JavaScript","Code"));
-console.log(matchFinder("Peter Parker","Pen"));
-console.log(matchFinder("Peter Parker","pet"));
+// console.log(matchFinder("John","ohn"));
+// console.log(matchFinder("JavaScript","Code"));
+// console.log(matchFinder("Peter Parker","Pen"));
+// console.log(matchFinder("Peter Parker","pet"));
 
 
 // 3.Problem
@@ -92,26 +90,38 @@ console.log(matchFinder("Peter Parker","pet"));
 // console.log(canPay([1,5,5],10));  
 
 
+
 function sortMaker(arr) {
+    if(!Array.isArray(arr)){
+        return "Invalid Input"
+    }
+        let firstElement = arr[0];
+        let secondElement = arr[1];
 
-    let sum = [0];
-    let num = []
-    
-    for (let i = 0; i < arr.length; i++) {
-        let element = arr[i];
-        
-        console.log(element);
-        
-    }  
-    
-  return num;
+        if(typeof firstElement !== 'number' || typeof secondElement !== 'number' || firstElement < 0 || secondElement < 0){
+            return "Invalid Input"
+        }
 
-}
-const arrNumber = [2,3];
-const arrNumberFunction = sortMaker(arrNumber);
-console.log(arrNumberFunction);
+        if (firstElement > secondElement) {
+            return [firstElement, secondElement];
+        }else if(firstElement > secondElement){
+            return [firstElement, secondElement];
+        }else if(firstElement === secondElement){
+            return "equal"
+        }else if(firstElement > secondElement){
+            return [firstElement, secondElement];
+        }
+
+        else {
+            return [secondElement, firstElement];
+        }
+    }
 
 
+const inputArray = [4, 10];
+const sortedArray = sortMaker(inputArray);
+
+console.log(sortedArray);
 
 
 
